@@ -16,15 +16,20 @@ Notre première partie consiste à mettre en place toute la partie "POLL" du pro
 Dockerfile
 
 ```Dockerfile
-FROM python:3.8-slim-buster # ICI on installe une version de python toute version de python3
+FROM python:3.8-slim-buster 
+# ICI on installe une version de python toute version de python3
 
-COPY . . # ICI on copie le dossier actuel pour le container.
+COPY . . 
+# ICI on copie le dossier actuel pour le container.
 
-RUN pip3 install -r requirements.txt # ICI cette commande permet d'installer les dépendances python3
+RUN pip3 install -r requirements.txt
+# ICI cette commande permet d'installer les dépendances python3
 
-EXPOSE 80 # ICI cette commande permet d'exposer un port dans le container, en l'occurrence le port 80
+EXPOSE 80
+# ICI cette commande permet d'exposer un port dans le container, en l'occurrence le port 80
 
-CMD ["flask", "run", "--host=0.0.0.0", "--port=80"] # ICI on lance tout simplement l'appli FLASK
+CMD ["flask", "run", "--host=0.0.0.0", "--port=80"]
+# ICI on lance tout simplement l'appli FLASK
 ```
 
 ## "RESULT" Part
