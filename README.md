@@ -54,7 +54,8 @@ Notre troisième partie consiste à mettre en place toute la partie "RESULT" du 
 
 ```Dockerfile
 # First stage - compilation
-FROM maven:3.5-jdk-8-alpine as builder # La commande "as" permet de nommer le builder dans notre cas
+FROM maven:3.5-jdk-8-alpine as builder
+# La commande "as" permet de nommer le builder
 
 WORKDIR /app # le WORKDIR permet de donner un directory à notre lieu de travail pour ne pas être perdu
 
