@@ -11,25 +11,25 @@ En rouge nous voyons les fichiers les plus importants de votre directory.
 
 ## "POLL" Part
 
-Notre premier partir consiste à mettre en place toute la partie "POLL" du projet Popeye.
+Notre première partie consiste à mettre en place toute la partie "POLL" du projet Popeye.
 
 Dockerfile
 
 ```Dockerfile
-FROM python:3.8-slim-buster # ICI on install une version de python toute version de python3 marches
+FROM python:3.8-slim-buster # ICI on installe une version de python toute version de python3
 
 COPY . . # ICI on copie le dossier actuel pour le container.
-		 
+
 RUN pip3 install -r requirements.txt # ICI cette commande permet d'installer les dépendances python3
 
-EXPOSE 80 # ICI cette command permet d'exposer un port dans le container en l'occurrence le port 80
+EXPOSE 80 # ICI cette commande permet d'exposer un port dans le container, en l'occurrence le port 80
 
-CMD ["flask", "run", "--host=0.0.0.0", "--port=80"] # ICI on lance tous simplement l'appli FLASK
+CMD ["flask", "run", "--host=0.0.0.0", "--port=80"] # ICI on lance tout simplement l'appli FLASK
 ```
 
 ## "RESULT" Part
 
-Notre seconde partir consiste à mettre en place toute la partie "RESULT" du projet Popeye.
+Notre seconde partie consiste à mettre en place toute la partie "RESULT" du projet Popeye.
 
 ```Dockerfile
 FROM node:12-alpine
@@ -45,11 +45,11 @@ CMD ["node", "server.js"]
 
 ## "WORKER" Part
 
-Notre troisième partir consiste à mettre en place toute la partie "RESULT" du projet Popeye.
+Notre troisième partie consiste à mettre en place toute la partie "RESULT" du projet Popeye.
 
 ```Dockerfile
 # First stage - compilation
-FROM maven:3.5-jdk-8-alpine as builder # La commande "as" permet de le nommer builder dans notre cas
+FROM maven:3.5-jdk-8-alpine as builder # La commande "as" permet de nommer le builder dans notre cas
 
 WORKDIR /app # le WORKDIR permet de donner un directory à notre lieu de travail pour ne pas être perdu
 
@@ -69,7 +69,7 @@ CMD ["java", "-jar", "worker-jar-with-dependencies.jar"]
 
 # DOCKER-COMPOSE.YML
 
-Voici un exemple de docker compose fonctionnelle pour notre architecture
+Voici un exemple de docker compose fonctionnel pour notre architecture
 
 ```yml
 version: "3"
@@ -155,7 +155,7 @@ volumes:
 
 
 
-Donc la requete a bien été effectue voila vous avez fini le projet Popeye.
+Donc la requête a bien été effectuée, voilà vous avez fini le projet Popeye.
 
 
 Et n'oubliez pas RTFM. ;)
