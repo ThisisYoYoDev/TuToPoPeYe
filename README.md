@@ -157,7 +157,10 @@ volumes:
 
 Donc la requête a bien été effectuée, voilà vous avez fini le projet Popeye.
 
+:warning: **La partie application n'a pas été précisé dans cette documentation à vous de trouver les modifications à faire.**
 
 Et n'oubliez pas RTFM. ;)
+
+:construction: N'hésitez pas à proposer des "**Pull Requests**" pour améliorer la documentation.
 
 By Yoel :two_hearts:
