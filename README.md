@@ -50,7 +50,7 @@ CMD ["node", "server.js"]
 
 ## "WORKER" Part
 
-Notre troisième partie consiste à mettre en place toute la partie "RESULT" du projet Popeye.
+Notre troisième partie consiste à mettre en place toute la partie "WORKER" du projet Popeye.
 
 ```Dockerfile
 # First stage - compilation
